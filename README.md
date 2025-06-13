@@ -87,22 +87,6 @@ Error Handling:
 
 If verification fails (e.g., low score or invalid token), you’ll be redirected to the form page with an error message.
 
-
-
-Screenshots
-
-
-
-Form Page
-Success Page
-
-
-
-
-
-
-
-Note: Replace the screenshot placeholders with actual images of your application.
 Production Considerations
 
 HTTPS: Use a reverse proxy (e.g., Nginx) or http.ListenAndServeTLS with an SSL certificate (e.g., Let’s Encrypt).
@@ -126,11 +110,4 @@ Analytics Dashboard: Create an admin page to log and display verification attemp
 PWA Support: Add a manifest and service worker to make the app installable.
 Multi-Action Support: Handle different reCAPTCHA actions (e.g., login, signup) with custom thresholds.
 
-Contributing
-Contributions are welcome! Please open an issue or submit a pull request with improvements or bug fixes.
-License
-This project is licensed under the MIT License.
-Author
-[Your Name][Your LinkedIn Profile][Your GitHub Profile]
-Feel free to reach out for feedback or collaboration!
 
