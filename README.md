@@ -125,9 +125,9 @@ Providing robust error handling and dynamic templating for a production-ready ex
 
 Future Enhancements
 
-Dark Mode: Add a toggle for dark mode using Tailwind’s dark: classes.
-Analytics Dashboard: Create an admin page to log and display verification attempts.
-PWA Support: Add a manifest and service worker to make the app installable.
-Multi-Action Support: Handle different reCAPTCHA actions (e.g., login, signup) with custom thresholds.
+1. Dark Mode: Add a toggle for dark mode using Tailwind’s dark: classes.
+2. Analytics Dashboard: Create an admin page to log and display verification attempts.
+3. PWA Support: Add a manifest and service worker to make the app installable.
+4. Multi-Action Support: Handle different reCAPTCHA actions (e.g., login, signup) with custom thresholds.
 
 
