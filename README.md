@@ -1,31 +1,32 @@
-reCAPTCHA v3 Demo with Go and Tailwind CSS
+# reCAPTCHA v3 Demo with Go and Tailwind CSS
+
 A production-ready Go application demonstrating Google reCAPTCHA v3 integration with a sleek, user-friendly frontend styled using Tailwind CSS. This project showcases secure form verification with a unique feature: a dynamic visualization of the reCAPTCHA score to indicate whether a user is likely human or a bot.
 
-Features
 
-reCAPTCHA v3 Integration: Seamlessly verifies user interactions using Google reCAPTCHA v3 with a Go backend (net/http).
-Score Visualization: Displays the reCAPTCHA score (0.0 to 1.0) on the success page with an animated progress bar, making it educational and engaging.
-Responsive UI: Styled with Tailwind CSS for a modern, clean, and mobile-friendly design.
-Error Handling: User-friendly error messages displayed on the form page if verification fails.
-Environment Configuration: Uses godotenv to securely manage reCAPTCHA keys and server port.
-Dynamic Templating: Injects the reCAPTCHA Site Key into the frontend using Go’s html/template.
+## Features
 
-Prerequisites
+- **reCAPTCHA v3 Integration**: Seamlessly verifies user interactions using Google reCAPTCHA v3 with a Go backend (`net/http`).
+- **Score Visualization**: Displays the reCAPTCHA score (0.0 to 1.0) on the success page with an animated progress bar, making it educational and engaging.
+- **Responsive UI**: Styled with Tailwind CSS for a modern, clean, and mobile-friendly design.
+- **Error Handling**: User-friendly error messages displayed on the form page if verification fails.
+- **Environment Configuration**: Uses `godotenv` to securely manage reCAPTCHA keys and server port.
+- **Dynamic Templating**: Injects the reCAPTCHA Site Key into the frontend using Go’s `html/template`.
 
-Go: Version 1.18 or higher.
-Google reCAPTCHA v3 Keys:
-Register at Google reCAPTCHA Admin Console.
-Select reCAPTCHA v3 and add localhost for testing.
-Obtain a Site Key and Secret Key.
+## Prerequisites
 
+- **Go**: Version 1.18 or higher.
+- **Google reCAPTCHA v3 Keys**:
+  - Register at [Google reCAPTCHA Admin Console](https://www.google.com/recaptcha/admin).
+  - Select reCAPTCHA v3 and add `localhost` for testing.
+  - Obtain a **Site Key** and **Secret Key**.
+- **Node.js** (optional): If you want to compile Tailwind CSS for production instead of using the CDN.
 
-Node.js (optional): If you want to compile Tailwind CSS for production instead of using the CDN.
+## Setup Instructions
 
-Setup Instructions
-
-Clone the Repository:
-git clone https://github.com/yourusername/recaptcha-demo.git
-cd recaptcha-demo
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/yeboahd24/golang-recaptcha.git
+   cd golang-recaptcha
 
 
 Install Dependencies:
@@ -87,6 +88,22 @@ Error Handling:
 
 If verification fails (e.g., low score or invalid token), you’ll be redirected to the form page with an error message.
 
+
+
+Screenshots
+
+
+
+Form Page
+Success Page
+
+
+
+
+
+
+
+Note: Replace the screenshot placeholders with actual images of your application.
 Production Considerations
 
 HTTPS: Use a reverse proxy (e.g., Nginx) or http.ListenAndServeTLS with an SSL certificate (e.g., Let’s Encrypt).
