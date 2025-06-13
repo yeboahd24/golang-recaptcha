@@ -49,6 +49,7 @@ Access the Application:Open http://localhost:8080 in your browser. Submit the fo
 
 
 Project Structure
+````bash
 recaptcha-demo/
 ├── cmd/
 │   └── server/
@@ -68,6 +69,8 @@ recaptcha-demo/
 ├── go.mod                   # Go module file
 ├── go.sum                   # Go dependencies checksum
 └── README.md                # This file
+
+````
 
 Usage
 
