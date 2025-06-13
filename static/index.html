@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reCAPTCHA v3 Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render={{.SiteKey}}"></script>
+    <script>
+        function onSubmit(e) {
+            e.preventDefault();
+            grecaptcha.ready(function() {
+                grecaptcha.execute('{{.SiteKey}}', {action: 'submit'}).then(function(token) {
+                    document.getElementById('g-recaptcha-response').value = token;
+                    document.getElementById('form').submit();
+                });
+            });
+        }
+    </script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+        <h1 class="text-2xl font-bold text-gray-800 mb-6 text-center">reCAPTCHA v3 Demo</h1>
+        {{if .Error}}
+        <div class="mb-4 p-4 bg-red-100 text-red-700 rounded-md">
+            {{.Error}}
+        </div>
+        {{end}}
+        <form id="form" action="/verify" method="POST" class="space-y-4">
+            <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+            <button type="button" onclick="onSubmit(event)" 
+                    class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-300">
+                Submit
+            </button>
+        </form>
+        <p class="mt-4 text-sm text-gray-600 text-center">
+            Protected by Google reCAPTCHA v3
+        </p>
+    </div>
+</body>
+</html>
